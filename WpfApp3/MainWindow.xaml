@@ -1,0 +1,182 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3" xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="WhiteSmoke">
+        <!--<ListView  Name="listView" FontSize="22">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Date" Width="100" ></GridViewColumn>
+                    <GridViewColumn Header="Day Of Week" DisplayMemberBinding="{Binding DayOfWeek}" Width="180"></GridViewColumn>
+                    <GridViewColumn Header="Year" Width="180" DisplayMemberBinding="{Binding Year}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+            <sys:DateTime>3/3/2024</sys:DateTime>
+            <sys:DateTime>2/2/2010</sys:DateTime>
+            <sys:DateTime>11/1/2020</sys:DateTime>
+        </ListView>-->
+
+
+
+        <!--<ListView SelectionChanged="listview_SelectionChanged" Name="listview" FontSize="23">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn  Header="Id" Width="70" DisplayMemberBinding="{Binding Id}" ></GridViewColumn>
+                    <GridViewColumn  Header="Author" Width="160" DisplayMemberBinding="{Binding Author}" ></GridViewColumn>
+                    <GridViewColumn  Header="Title" Width="160" DisplayMemberBinding="{Binding Title}" ></GridViewColumn>
+                    <GridViewColumn  Header="Genre" Width="160" DisplayMemberBinding="{Binding Genre}" ></GridViewColumn>
+                    <GridViewColumn  Header="Publisher" Width="160" DisplayMemberBinding="{Binding Publisher}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>-->
+
+        <!--<ListView  ItemsSource="{Binding Books}" FontSize="23">
+            <ListView.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="SpringGreen" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+            </ListView.Background>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn  Header="Id" Width="70" DisplayMemberBinding="{Binding Id}" ></GridViewColumn>
+                    <GridViewColumn  Header="Author" Width="160" DisplayMemberBinding="{Binding Author}" ></GridViewColumn>
+                    <GridViewColumn  Header="Title" Width="160" DisplayMemberBinding="{Binding Title}" ></GridViewColumn>
+                    <GridViewColumn  Header="Genre" Width="160" DisplayMemberBinding="{Binding Genre}" ></GridViewColumn>
+                    <GridViewColumn  Header="Publisher" Width="160" DisplayMemberBinding="{Binding Publisher}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>-->
+
+        <!--<Menu>
+            <MenuItem Header="File" FontSize="22" >
+                <MenuItem Header="New . . .">
+                    <MenuItem.Icon>
+                        <Image Source="Images/mario.png" ></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Open . . ."></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Save . . ."></MenuItem>
+                <MenuItem Header="Save As . . ."></MenuItem>
+                <MenuItem Header="Help . . .">
+                    <MenuItem Header="Help Extra . . ."></MenuItem>
+                </MenuItem>
+                
+            </MenuItem>
+        </Menu>-->
+
+        <!--<Button Width="100" Height="50" Content="Right Click Me">
+            <Button.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Menu Item 1" ></MenuItem>
+                    <MenuItem Header="Menu Item 2" ></MenuItem>
+                    <MenuItem Header="Menu Item 3" ></MenuItem>
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>-->
+
+
+        <!--<Grid Background="LimeGreen">
+            <Grid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Menu Item 1" ></MenuItem>
+                    <MenuItem Header="Menu Item 2" ></MenuItem>
+                    <MenuItem Header="Menu Item 3" ></MenuItem>
+                </ContextMenu>
+            </Grid.ContextMenu>
+        </Grid>-->
+
+
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+
+        <ToolBar >
+            <Image Source="Images/mario.png" ></Image>
+            <Separator></Separator>
+            <Button Width="30" Height="30" Background="DeepSkyBlue" Content="Hi" ></Button>
+            <TextBlock VerticalAlignment="Center">Hello</TextBlock>
+        </ToolBar>
+
+        <TreeView Grid.Row="1">
+            <TreeViewItem Header="Desktop">
+                <TreeViewItem >
+                    <TreeViewItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox></CheckBox>
+                            <Image  Source="Images/mario.png" Height="30"></Image>
+                            <TextBlock>User</TextBlock>
+                        </StackPanel>
+                    </TreeViewItem.Header>
+                </TreeViewItem>
+                <TreeViewItem Header="Public" >
+                    
+                </TreeViewItem>
+                <TreeViewItem Header="Computer">
+                    <TreeViewItem Header="Local Disc">
+                        <TreeViewItem Header="Program Files" />
+                        <TreeViewItem Header="Users" />
+                        <TreeViewItem Header="Windows" />
+                    </TreeViewItem>
+                </TreeViewItem>
+            </TreeViewItem>
+        </TreeView>-->
+
+
+
+        <!--<Border Width="165" Height="48"  CornerRadius="8" BorderThickness="4">
+
+            <Border.BorderBrush>
+                <LinearGradientBrush>
+                    <GradientStop Color="SpringGreen" Offset="0" ></GradientStop>
+                    <GradientStop Color="Black" Offset="1" ></GradientStop>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+
+            <TextBox Background="WhiteSmoke" FontSize="22" BorderThickness="0" Width="150" Height="35"  >
+
+            </TextBox>
+        </Border>-->
+
+
+
+
+
+        <ListBox ItemsSource="{Binding Books}" Background="LightGoldenrodYellow" Name="listbox">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel></VirtualizingStackPanel>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Width="{Binding ElementName=listbox,Path=ActualWidth}" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"  />
+                            <ColumnDefinition Width="3*"  />
+                            <ColumnDefinition Width="*"  />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Height="100" Width="100" Source="{Binding ImagePath}" ></Image>
+                        <StackPanel Grid.Column="1"  >
+                            <TextBlock Width="130" Text="{Binding Title}"></TextBlock>
+                            <TextBlock Width="130" Text="{Binding Author}"></TextBlock>
+                            <TextBlock Width="130" Text="{Binding Pages}"></TextBlock>
+                        </StackPanel>
+                        <Button Grid.Column="2" Margin="5" Padding="10" FontSize="20" >Buy</Button>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            
+            
+        </ListBox>
+        
+
+    </Grid>
+</Window>
